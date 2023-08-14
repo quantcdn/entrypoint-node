@@ -33,9 +33,6 @@ jobs:
     - name: Test
       run: go test -v -race ./... -coverprofile=build/coverage.out
 
-    - uses: shogo82148/actions-goveralls@v1
-      with:
-        path-to-profile: build/coverage.out
 
     - name: Upload test coverage
       uses: actions/upload-artifact@main
